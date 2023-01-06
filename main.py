@@ -9,12 +9,15 @@ from bson import json_util
 from bson.objectid import ObjectId
 from flask_cors import CORS
 
+
+
 app = Flask(__name__)
 
 mongo = os.environ['mongo']
 otra = str(mongo)
 client = MongoClient(otra)
 cors = CORS(app, resources={r"/user/*": {"origins": "*"}})
+
 app.config["UPLOAD_FOLDER"] = "archivos"
 ALLOWED_EXTENSIONS = set(['jpg', 'png', 'jpeg', 'gif','pdf','txt','doc','docx'])
 
@@ -71,11 +74,19 @@ def encontra():
 @app.route('/user/<id>', methods=['GET'])
 def consulta(id):
   #Para consulta los paccientes
-  user = client.db.users.find_one({'_id:ObjectId(id)'})
+  user = client.db.users.find_one({'_id':ObjectId(id)})
   if(len(user)>0):
     response = json_util.dumps(user)
     return response
   return jsonify({"message":"no encontrado"})
+
+
+@app.route('/user/<id>', methods=['DELETE'])
+def userDel(id):
+  client.db.users.delete_one({'_id':ObjectId(id)})
+  response= jsonify({"message":"user" +  id + " ha sido eliminado"})
+  return response
+
 
 
 @app.route('/user/archivos', methods=['POST'])
@@ -97,6 +108,14 @@ def not_encontrado(error=None):
   message.status_code = 404
   return message
 
+@app.errorhandler(403)
+def not_encontrado(error=None):
+  message = jsonify({
+    'message': 'acceso no permitido',
+    'status': 403
+  })
+  message.status_code = 403
+  return message
 
 if __name__ == "__main__":
   app.run(debug=True, host='0.0.0.0', port=81)
