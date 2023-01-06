@@ -3,6 +3,7 @@ from flask import Flask, request, jsonify, Response
 from flask_pymongo import PyMongo
 from pymongo import MongoClient
 import pymongo
+from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
 from bson import json_util
 from bson.objectid import ObjectId
@@ -14,6 +15,14 @@ mongo = os.environ['mongo']
 otra = str(mongo)
 client = MongoClient(otra)
 cors = CORS(app, resources={r"/user/*": {"origins": "*"}})
+app.config["UPLOAD_FOLDER"] ="archivos"
+ALLOWED_EXTENSIONS =set(['jpg','png','jpeg','gif'])
+
+def extesiones():
+  file = file.split('.')
+  if file[1] in ALLOWED_EXTENSIONS:
+    return True
+  return False
 
 @app.route('/', methods=['POST'])
 def create_user():
@@ -58,12 +67,25 @@ def encontra():
 
 
 @app.route('/user/<id>', methods=['GET'])
-def consulta():
+def consulta(id):
     #Para consulta los paccientes
     user = client.db.users.find_one({'_id:ObjectId(id)'})
-    response = json_util()
-    return "recibido"
+    response = json_util.dumps(user)
+    return response
 
+
+@app.route('/user/archivos', methods=['POST'])
+def guardaArchivo():
+  file= request.file["uploadFile"]
+  filename = secure_filename(file.filename)
+  if file and extesiones(filename):
+    print("permitido")
+    file.save(os.path.join(app.config["UPLOAD_FOLDER"],filename))
+  
+  
+  
+  return "recibido"
+  
 
 @app.errorhandler(404)
 def not_encontrado(error=None):
