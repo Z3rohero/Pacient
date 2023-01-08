@@ -89,6 +89,31 @@ def userDel(id):
 
 
 
+@app.route('/user/<id>', methods=["PUT"])
+def setUser(id):
+  password=request.json["password"]
+  nombre=request.json["nombre"],
+  numero=request.json["numero"] ,
+  email=request.json["email"],
+  apellidos=request.json["apellidos"],
+  enfermedad=request.json["enfermedad"]
+  if nombre and numero and email:
+    cifrado = generate_password_hash(password)
+    user=client.db.user.update_one({'_id':ObjectId(id)},{
+            '$set':{
+              'nombre': nombre,
+              'numero': numero ,
+              'email': email,
+              'apellidos':apellidos,
+              'enfermeda': enfermedad,
+              'password':cifrado
+            }
+        })
+    return  jsonify({
+      "message":"usuario " + id +  "ha sido actualizado"
+    })
+   
+  
 @app.route('/user/archivos', methods=['POST'])
 def guardaArchivo():
   file = request.file["uploadFile"]
