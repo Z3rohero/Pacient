@@ -1,4 +1,4 @@
-Esta realizado en flazk   en mogo db Altas la parte de backend, para realizar get y post  entra un rest client como postman , para valida el envio de informacion.
+Esta realizado en flask y la bases de datos es  mongo db Altas, para realizar una consulata de  get o  post  entra un rest client como postman.
 
 para ver los usuarios
 insertados

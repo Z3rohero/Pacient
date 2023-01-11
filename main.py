@@ -8,6 +8,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from bson import json_util
 from bson.objectid import ObjectId
 from flask_cors import CORS
+#from controllers.delete import userDel
 
 app = Flask(__name__)
 
@@ -100,9 +101,9 @@ def verificacion():
     UserPasword= signin_user['password']
     veri = check_password_hash(UserPasword,password)
     if veri == True:
-      return jsonify({"Contraseña_correcta": "True"})
+      return jsonify({"Contrasena_correcta": "True"})
     else:
-      return jsonify({"Contraseña_incorrecta": "False"})
+      return jsonify({"Contrasena_incorrecta": "False"})
   return jsonify ({"message":" Usuario o la contraseña incorrecta"})
  
 
