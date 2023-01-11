@@ -1,0 +1,493 @@
+Version 0.5.0 released
+________________________________________________________________________________
+22/05/2005 2.50  gt         New plugin to check for iReport updates
+20/05/2005 22:21 rl         Added tooltips to the FormatCommand toolbar buttons
+18/05/2005 0.24  gt         New option to set groovy the default language for expressions
+17/05/2005 22:03 rl         6 formatting commands added. Element Maximize + Center in Band
+17/05/2005 02:01 gt         Added support for export parameters
+17/05/2005 02:01 gt         Switched to JR 0.6.7
+16/05/2005 22:20 rl         Toolbar Format extended with numerous commands. Format commands are now in separate files
+16/05/2005 18.12 gt         Fixed 819093 Now iReport use UTF-8 charset to write the config file
+16/05/2005 18.05 gt         Fixed 992170  Now MySQL-TIME is converted correctly as java.sql.Time
+16/05/2005 17.41 gt         Fixed 1124129 Now Pattern don't needs an <enter> to be set
+16/05/2005 17.39 gt         Fixed 1163510 Now if you rename a variable (or a parameter), it is picked up by syntax correctly
+16/05/2005 17.36 gt	    Fixed bug 1167814 Now an Exception StackTrace is printed for Custom Data Source when test fail
+16/05/2005 17.10 gt         Added status label when executing SQL statements in Report query dialog
+16/05/2005 17.09 gt	    Added Built-in parameters handling
+15/05/2005 23.56 gt	    Fixed bug 1182933 Now in in Bean-ConnectionDialog is used the ReportClassLoader
+12/05/2005 16.58 gt         New contextual menu for the opened files list
+12/05/2005 16.25 gt         Added menus Close, Close All, Close All except this, Revert To Saved
+12/05/2005 2.49  gt         Added Connections combobox in the ToolBar
+12/05/2005 2.01  gt         Fixed bug 1179681 Now all textareas support undo/redo
+12/05/2005 1.10  gt         Fixed bug 1121721 Now the scriptlet editor use get{Field|Variable|Paramter}Value() instead Map
+12/05/2005 1.10  gt         Fixed some compilation problems in IReportCompiler
+12/05/2005 0.39  gt         Fixed bug 1171391 Now document structure is updated when an element is deleted or pasted
+09/05/2005 10.25 gt         Fixed bug 1188584 Objects library now is refreshed on query change
+07/05/2005 19:20 rl         Separated code for Toolbar Format to ToolbarFormatPanel.java/form for easy maintenance
+07/05/2005 2.06  gt         Implemented support for PDF export options
+07/05/2005 2.04  gt         Added support for exporter options
+07/05/2005 0.44  gt         If not set, the Locale used is the system default
+07/05/2005 0.12  gt         New general options interface (sheet property)
+06/05/2005 16:43 rl         Additional option: Synchronize Report Name with File name when saving
+06/05/2005 00:34 rl         Added (Modified) or (Unchanged) to the screen title (Not finished yet)
+06/05/2005 00:34 rl         Filename defaults to report name when saving the file
+                            If user enters different name, then user is asked whether to change
+                            the report name as well.
+05/05/2005 2.58  gt         Implemented prompt dialog for parameters (Integer, Double, String, Boolean, Date, Time, Timestamp)
+03/05/2005 15.05 gt         Added plugin to set TERRITORY and LANGUAGE for Oracle connections
+03/05/2005 15.05 gt         Fixed bug 1191925 (Small Annoyances...)
+02/05/2005 20.17 gt         Classpath handling (now you can add directories and jars to the ireport classpath)
+22/04/2005 18.01 gt         Now element border properties are handled separatly for multiple selections
+11/04/2005 22.53 gt         New "remove margins" feature
+11/04/2005 22.52 gt         New contextual menu for variables/fields/parameters
+11/04/2005 22.51 gt         Added jr-bsh-compiler (not in JR 0.6.6)
+08/04/2005 0.05  gt         Support for new variable attributes (incrementType and incrementGroup)
+08/04/2005 0.04  gt         Support for groovy language for expressions
+08/04/2005 0.04  gt         Switched to JR 0.6.6
+08/04/2005 0.01  gt         Added checkbox for enable/disable textfield height optimization
+24/03/2005 20.10 gt         Added "set report locale" menu (selected locale is stored in reportLocale property
+17/02/2005 0.01  gt         Added support for JRDataSourceProvider interface
+17/02/2005 0.01  gt         Fixed bug 1077793 
+16/02/2005 23.09 gt         Fixed bug 1121719
+06/02/2005 23.11 gt         Fixed bugs 1116676, 1116675, 1116666, 1116661 
+04/02/2005 14.15 gt         Now the Massive Compiler uses the global options to choose the right compiler
+04/02/2005 14.14 gt         Fixed "lib" dipendencies when iReport is started using Java Web Start  
+
+
+Version 0.4.1 released
+________________________________________________________________________________
+28/01/2005 1.22  gt         Added plugin support for Java Web Start
+22/01/2005 2.38  gt         Removed some limitations in the QueryDialog
+22/01/2005 2.37  gt         Rewritten the code to retrieve fields from JavaBean using BeanUtils
+22/01/2005 2.36  gt         Fixed barcode expression (now it is a common expression)
+22/01/2005 2.35  gt         Added support for JDT, BeanShell and Jikes compilers
+19/01/2005 15.57 gt         Switched to JR 0.6.4
+19/01/2005 15.57 gt         Help menu points to http://ireport.sf.net/docs.html
+02/12/2004 2.06  gt         Fixed BUG [ 850801 ] built in variables have wrong Class when dragged to report
+02/12/2004 1.35  gt         If an active connection is not set, the first available connection is used.
+02/12/2004 1.35  gt         Vairable, Field and Parameters dialog are now resizable
+02/12/2004 1.06  gt         Fixed BUG [ 995741 ] "Layout problems in "Add/modify parameter" window" 
+01/12/2004 19.08 gt         Added -beanClass command line option to set default extended JavaBean class name
+01/12/2004 19.07 gt         Added "kill this thread" contextual menu in the threads list.
+01/12/2004 18.00 gt         Added JRRenderable as Image experssion class
+01/12/2004 17.59 gt         Added support for loading colors stored in XML using a name (gray, red, ....)
+01/12/2004 0.07  gt         Completed support for box tag and floating column footer
+30/11/2004 13.23 gt         Started support for box tag.
+30/11/2004 13.22 gt         Switched to JR 0.6.3
+26/11/2004 10.24 gt         Added support for report localization
+26/11/2004 10.20 gt         Modified JavaBeanDataSourceConnection to get a Vector or an Array on beans
+26/11/2004 10.17 gt         Fixed BUG [ 1073380 ] "TextField Expression Class has limited options"
+12/11/2004 17.43 gt         Added support for resource bundle base name
+12/11/2004 17.36 gt         Fixed BUG 1057914 
+12/11/2004 2.37  gt         Handled new $R syntax
+12/11/2004 2.37  gt         Added support for msg and str
+12/11/2004 2.37  gt         Added support for imports
+12/11/2004 2.37  gt         Added support for link target
+12/11/2004 2.37  gt         Fixed BUG 1044737 (now instead of Now)
+
+
+Version 0.4.0 released
+________________________________________________________________________________
+06/10/2004 2.19  gt         Fixed a problem with lastPageFooter
+06/10/2004 2.18  gt         Added support for JasperReports JRXmlDataSource
+06/10/2004 2.17  gt         Added support for custom series
+06/10/2004 2.17  gt         New color selector panel for Property Sheet
+05/10/2004 2.19  gt         Added clear log console function
+05/10/2004 2.19  gt         New property sheet for chart details
+04/10/2004 2.22  gt         Filled formatting toolbar
+04/10/2004 2.22  gt         Added new Thread monitor
+04/10/2004 2.22  gt         Added Total to the library
+04/10/2004 2.22  gt         Added support for series
+04/10/2004 2.22  gt         First REAL charting support
+18/09/2004 2.29  gt         Implemented "Page number", "Total pages" and "Page X of Y" library objects
+15/09/2004 2.51  gt         Implemented the first scratch for the Objects Library
+09/09/2004 01.03 gt         Fixed some bugs: 1021763,1021453,1021060,1015153,1021763,999137,1003975,
+                            1004843,1001920,1001061,1001060
+07/09/2004 23.47 gt         Now iReport remember toolbar visibility.
+01/09/2004  0.37 gt         Support fot lastPageFooter band
+31/08/2004  0.36 gt         New compatibility support dialog for jr 0.6.0 and 0.6.1
+31/08/2004 23.39 gt         Switched to JR 0.6.1
+20/08/2004 1.50  gt         First experiments for new toolbars
+17/08/2004 23:24 ertano	    - BUG #1001059 fixed: No Default Language when first start
+			    - Made Active Threads hidden (was confusing)
+17/08/2004 23:24 ertano	    BUG #1003389 fixed: Could not set default Font
+07/08/2004 22:55 rlamping   Bug solved. Files came up with zero width and heigth and xml not read.
+                            dtd in report.java renamed to reflect the new jasperreport package name
+03/08/2004 1.37  gt         New JavaBean extended field retriever in ReportQueryDialog (for an Italian company)
+03/08/2004 1.37  gt         Text wizard plugin added (a really custom plugin for an Italian company)
+31/07/2004 23:47 rlamping   Moving of groups enabled. One group at a time.
+29/07/2004 10.45 gt         Switched to net.sourceforge.jasperreports!
+29/07/2004 10.45 gt         Upgraded build.xml to iReport 0.4.0
+25/07/2004 22:42 rlamping   Adjusted scrollbar behaviour. When clicking next to the know, the scrollbars now
+                            move the distance of the amount visible.
+		            Small correction when double clicking on band limit. Line elements now are 
+                            properly handled. 
+25/07/2004 22:42 rlamping   996777 Drawing lines with shift key pressed, angle is multitude of 15 degrees.
+			    Snapping to grid algorithm (MultipleGrid) enhanced.
+25/07/2004 15:53 rlamping   Double click on band limit, will shrink the height to just enclose
+                            the band element present. No action if no band elements present.
+		            Handy in detail band.
+                            Double click on south handle of text element, shrinks element to font size +2.
+			    To do: Make it work for large font sizes.
+22/07/2004 10.00 gt         Fixed bug #-993878 about parameter parsing in Query dialog
+22/07/2004 10.00 gt         Fixed bug #995733 about build.xml and start_jar
+18/07/2004 22:40 rlamping   Changes related to zooming
+  			      Zoom in/out, if selected items, then these are centered.
+				  no matter what way of selecting the zoom (combobox or CTRL/SHIFT)
+                              Zoom in with CTRL/SHIFT + left mouse button
+                              Zoom out with CTRL/SHIFT + left mouse button
+			    Correct upper right blue square of bounding box of an element.
+17/07/2004 11:00 rlamping   Changes related to zoomFactor
+                            After reloading a file that was externally modified, the current
+                            zoomFactor is restored. So if you uses 200% it will stay 200% after reloading.
+                            in Combobox zoomfactor:
+                              Fit To page => Width
+                              Added: Height
+                              Added: Whole Page
+		            Zoom in on selected elements.(horizontal ok, vertical to correct later)
+Version 0.3.2 released
+________________________________________________________________________________
+
+13/07/2004 16.00 gt         add align to left margin to main and contextual format menu
+			    add align to right margin to main and contextual format menu
+			    Fixed undo when band is switched
+13/07/2004 08:06 rlamping   getNewElementKey now also applied to new elements
+                            Robert F Lamping added to Contributors in iReportAbout (<-- too great :D )
+12/07/2004 22.55 rlamping   Added shortcuts for alignment: CTRL/SHIFT plus cursor keys
+                            CTRL/SHIFT + O  = Organize in tabular way
+			    On graphic screen: Copy+paste now also works with CTRL/Insert and Shift/Insert
+                            Added my name to contributors in iReportAbout
+			    Added align to bottom band
+			    Added align to left margin  (To do: add to menu GT? can you do this?)
+			    Added align to right margin (To do: add to menu. GT? can you do this?)
+12/07/2004 10.19 gt         Added Field pattern menu item on contextual menu for Textfields elements
+12/07/2004 10.19 gt         Fixed some element properties missing updates
+12/07/2004 10.18 gt         Fixed Element Band Switching anf key movements
+11/07/2004 00:32 rlamping   Numbering of new/copied elements solved
+                            Elements are now named according to their nature: line, graphs, chart etc.
+10/07/2004 23.51 gt         Added a pattern editor
+10/07/2004 2.37  gt         Fixed bug #98779 (isForPrompting not saved if modified)
+09/07/2004 23.26 gt         Fixed some problem on JRTextExporter
+09/07/2004 23.25 gt         Fixed unrecognized field type in QueryDialog
+09/07/2004 2.20  gt         Moved call to adjustBand function from translate method to mouse release event
+                            in JReportFrame to avoid unwanted band adjusting of the first element loading
+                            a file
+09/07/2004 0.09  gt         Fixed problems about design height when title or summary set to stay on a
+                            separate page (BUG #926952)
+08/07/04   23:42 rlamping   RFE 704101 A Collision detection
+                            RFE 704101 B Switch off transparency when 
+                                         background is set.
+                            RFE 704101 C Element Band Switching
+08/07/04   21:20 rlamping   improved Orientation, Height and Width behaviour
+                            PresetSize deducted when opening a file based on 
+                            given Height and Width
+08/07/2004 19.40 gt         Now iReport ask for a password if password is not saved (BUG #934063)
+08/07/2004 19.39 gt         Upgraded build.xml to copy png files
+08/07/2004 18.29 gt         Fixed field selection and text replace in texteditor
+08/07/2004 17.59 gt         Updated Barcode element support (added evaluation time and evaluation group)
+                            Now support multiple selection 
+08/07/2004 15:27 ertano	    Updated German and English translation files
+08/07/2004 15:27 ertano	    Modified save logic to consider read ony files (BUG #927510)
+			    Now when you open a RO File it is marked in the Title with "(READ ONLY)", 
+			    you can modify but cannot save to the origin RO or another RO file
+			    you must use SaveAs with a non RO or new file in order to be able to save
+08/07/2004 2.36  gt         First version of JRExtendedBeanDataSource
+02/07/2004 17.49 gt         Fixed scrollbar on texteditor
+02/07/2004 17.48 gt         Fixed zoom combo box problems
+02/07/2004 1.06  gt         Created the first version of JRXMLDataSource and JRXMLDataSourceConnection
+30/06/2004 14.57 gt         Added support for chinese (simplified, china, taiwan)
+29/06/2004 13.56 gt         Set Metal as default L&F to avoid problems with some languages like chinese
+24/06/2004 22.04 gt         Fixed a problem on MacOSX about drag and drop
+29/06/2004 13.25 gt         Fixed scrolling in report wizard
+24/06/2004 22.04 gt         Implemented some hacks for MacOSX compatibility
+24/06/2004 22.03 gt         Localized options dialog
+24/06/2004 21.50 gt         Removed support for deprecated multiline expressions
+23/06/2004 23.29 gt         Fixed bug #978047
+23/06/2004 23.29 gt         Fixed bug #976935
+21/06/2004 23.27 gt         new copy and paste element style feature (support undo/redo)
+21/06/2004 21.25 gt         removed null alert and check for null log console if config.xml is not found
+21/06/2004 21.24 gt         fixed some bugs on JRTxtExporter
+21/06/2004 21.23 gt         fixed column draw starting from page header instead from column header
+21/06/2004 21.22 gt         new F3 feature to convert a static text into a textfield.
+21/06/2004 21.22 gt         fixed bug on creating .ireport directory
+08/06/2004 23.52 gt         now the Wizard look for templates in ireport_home and in ireport_home/etc too
+08/06/2004 23.34 gt         fixed a little bug on classic template file
+08/06/2004 23.27 gt         fixed an error on extension when saving csv files
+08/06/2004 23.27 gt         implemented Bean set datasource connection
+08/06/2004 23.26 gt         implemented CVS datasource connection
+04/06/2004 14.00 hsw        added layout into some dialogs
+04/06/2004 02.07 gt         Fixed getFetchSize for JDBC drivers that don't supports it.
+04/06/2004 02.07 gt         Fixed loading of scriptlet_template.jav from jar
+03/06/2004 22.00 hsw        added new L&F Looks
+03/06/2004 14.00 hsw        added layout into some dialogs
+03/06/2004 00.20 gt         Fixed a bug storing end loading default compile dir from options dialog 
+02/06/2004 22.40 gt         Set new version to 0.3.2 on MainFrame and build.xml
+02/06/2004 22.39 gt         Fixed problem on Wizard: the official position of template dir is IREPORT_HOME, not "IREPORT_HOME/etc".
+02/06/2004 22.38 gt         Fixed a problem (missed to add ".jasper" extension on compiled files) 
+
+Version 0.3.1 released
+________________________________________________________________________________
+26/05/2004 17.51 gt         Fixed some ClassLoader problems
+26/05/2004 16.36 gt         Tested succesfully compatibility with java 1.5 !!!
+26/05/2004 16.36 gt         Now iReport looks for all installed L&F.
+25/05/2004 17.13 gt         New dynamic class loader. Now you can put jar or zip of your jdbc driver in lib and use it without restart iReport
+                            A classpath manager is coming soon.
+25/05/2004 1.45  gt         Added methods public JReportFrame getActiveReportFrame() and public static MainFrame getMainInstance()
+                            See java docs or method comment for details
+25/05/2004 1.44  gt         Definitive popup menu for all JRTextExpressionAre
+25/05/2004 0.07  gt         Fixed some problems on JRTextArea, added undo and mousewheel capabilities, added first contextul menu for edit  
+25/05/2004 0.06  gt         Removed a lot of unuseful System.out
+24/05/2004 19.17 ertano	    Continued on I18n (Mainframe, Values, Parameters, Fields Dialog)
+24/05/2004 15.07 gt         New ReportClassLoader to reload Scriptlet class each time (if the scriptlet reside on report directory
+22/05/2004 23.44 egonrp     Fixed report compiler error: "The title section, the page and column headers and footers and the margins do not fit the page height."
+22/05/2004 19.12 egonrp     Fixed default font read/write issues. Now the iReport compile the JasperReports samples correctly.
+22/05/2004 16.08 egonrp     Fixed fail on save pdf font name field when terminate with "TTF".
+21/05/2004 12.03 gt         Replaced jasperReports jar with the last version (0.5.3)
+21/05/2004 11.50 gt         Added a trivial plugin example (example_1.xml + it.businesslogic.ireport.plugin.example.HelloWorld)
+21/05/2004 11.47 gt         Added a new LanguageChangedEvent: now a LanguageChangedListener can register it to I18n
+                            class. Register listeners with attention. No remove listener implemented yet.
+21/05/2004 11.45 gt         Added support for incrementerFactoryClass for variables (JR 0.5.3)
+21/05/2004 11.45 gt         Added support for new isTextStyled on text elements (JR 0.5.3)
+21/05/2004 11.44 gt         Completed support for plugin configuration
+20/05/2004 21.13 egonrp     Fixed error on executing report with resources and classes using relative path.
+20/05/2004 18.19 gt         Added logic to handle correctly the new "jrxml" file extension (new from JR 0.5.3). Preserved
+                            compatibility with old xml extension.
+20/05/2004 17.38 ertano     NEW FEATURE: Added new F2 Key Event for Reports which allows the user to directly change 
+			    the Text in Textfields. If you select more then one textfields it asks you for each of them.
+20/05/2004 13.21 gt         Relesed the first plugin: massive compiler (see menu->plugins)
+20/05/2004 13.20 gt         First implementation for iReport plugins
+19/05/2004 23.28 egonrp     Now show the image elements from report directory relative path and URLs, e.g. ImageExpression = "logo.jpg"   or   "http://br.i1.yimg.com/br.yimg.com/i/br/m7m.gif"
+18/05/2004 11.44 ertano     BUG #934066 fixed - Wizard step 4 was not working as templates were moved from ./ to ./etc
+18/05/2004 11.03 ertano     BUG #954156 fixed - Selection in compatibility window was not saved/loaded
+17/05/2004 20.55 egonrp     fixed bug then requires barcode to be edited to save image expression
+17/05/2004 17.20 egonrp     BUG #955403 fixed - Recursive calls on maximize a internal frame
+17/05/2004 16.27 egonrp     BUG #955169 fixed - Now pressing ENTER in the zoom combobox update the view of selected report
+17/05/2004 14.56 egonrp     BUG #954172 fixed - Loading modified XML file
+17/05/2004 01.56 gt         finished rotation support (remains a little refresh problem)
+16/05/2004 01.02 egonrp     started chart factory and wizard support 
+16/05/2004 00.38 gt         started text rotation support 
+15/05/2004 17.05 egonrp	    the "save as" file command now update the files tree
+15/05/2004 17.05 egonrp	    BUG #944061 fixed - the same file may be open only one time 
+15/05/2004 15.43 egonrp	    New cIDs added for user messages - "usrMsg*"
+15/05/2004 15.40 egonrp     support for internationalization message dialogs
+15/05/2004 12.37 egonrp     fixed some modal dialogs issues
+15/05/2004 11.38 egonrp     BUG #953823 fixed - broken bin/startup.sh
+15/05/2004 0.12  gt         added spanish locale (thanks to Jorge <jorarcia@users.sourceforge.net>)
+14/05/2004 13:51 ertano	    BUG #952588 fixed
+14/05/2004 00.40 egonrp     added french locale
+13/05/2004 15.17 gt         added Russian ru_RU and uk_UA locale (thanks to Dmitry Starjinsky)
+13/05/2004 13.30 hsw        finished implementing barcode support
+________________________________________________________________________________
+Version 0.3.0 released
+________________________________________________________________________________
+
+11/05/2004 12.00 hsw        added starter for Windows and Linux without ant
+10/05/2004 22.15 egonrp	    New cID added - "find"
+10/05/2004 12.00 hsw        continuing implementing barcode support
+10/05/2004 09.00 hsw        Updated german locale
+10/05/2004 00.08 gt         Updated italian locale
+09/05/2004 00.00 hsw        continuing implementing barcode support
+08/05/2004 19.09 egonrp	    support for JFreeChart 0.9.18 new files added: jfreechart-0.9.18.jar, jcommon-0.9.3.jar and log4j-1.2.8.jar
+08/05/2004 19.09 egonrp	    some fixes for Internationalization, reading "Country" property from config.xml
+08/05/2004 19.09 egonrp	    suport for brazilian portuguese
+08/05/2004 19.01 ertano     update _en and _de local files
+08/05/2004 19.01 ertano     Finished I18n work on Main Menu and on context menu (JReportFrame)
+07/05/2004 18.16 gt         Enhanced Context Menu for elements (added some features to Ertano modifications)
+06/05/2004 02.37 gt         Rewrited about form
+06/05/2004 02.37 gt         Enhanced popup menu on document tree
+06/05/2004 02.37 gt         Updated italian locale
+27/04/2004 01.49 ertano	    Continued on I18n
+27/04/2004 01.49 ertano	    Better Multiple Element Selection, Context Menu for Multiple Selections
+26/04/2004 22.52 gt	    Versioned official 0.2.x iReport manual
+26/04/2004 00.00 gt	    Rewritten all paths logic (no more final vars). Please note that iReport is not a thread safe application...
+26/04/2004 00.00 gt	    Added default value for i18n getStrings (to avoid resource not found exceptions for new entries in properties locale files)
+26/04/2004 00.00 gt	    Added support for command line args using jcmdline (start ireport with -? to see supported options or simply
+                            to open one o more files (usinf wildcards in name,... very cool)                             
+24/04/2004 02.15 gt         Added first contextual menu for elemens tree
+24/04/2004 02.15 gt         Added support for scriptlet (experimental, need to spawn the fill process...)
+24/04/2004 02.15 gt         Added support for a new experimental txt exporter (for an italian company)
+24/04/2004 02.15 gt         Filled italian locale
+20/04/2004 20:50 phenderson Improved Report Query Dialog, so user can disable automatic field retieval, 
+                            as in some cases this could be harmful to the db server.
+                            Removed some of the annoying .nbattrs file
+18/04/2004 17:45 ertano	    Continued on I18n
+18/04/2004 16:18 ertano	    Made Comboboxes for Parameters and Variables editable again
+09/04/2004 19:51 ertano	    some mnemonics bugs fixed; added new Acclerators for New/Save/Open/Quit
+09/04/2004 19:51 ertano	    BUG #927514 fixed
+09/04/2004 09:15 ertano	    Enhanced: (JRParameterDialog,JRVariableDialog,JRFieldDialog) Combox with Type no longer editable, added java.sql.Time to List of available Types
+08/04/2004 21:00 ertano     BUG Fixed: iReport was writting on each save a new property of "ireport.scriptlethandling"
+24/03/2004 23:28 phenderson Enhanced I18n engine to load language properties files from the classpath.
+                            All language files should now be on the classpath in package it/businesslogic/ireport/locale/
+                            Language files should be named. Ireport_<language>.properties OR Ireport_<language>_<country>.properties
+                            Where language is the 2 letter language name and country is the 2 letter country code.
+                            (see the java doc on java.util.Locale for more info)
+                            Also load ireport config first thing so the Look And Feel class can be set before any
+                            GUI code is executed.
+20/03/2004 22:53 phenderson ReportQueryDialog overhaul. I have radically improved the report query dialog, 
+                            now the fields are read from the database automagically. Say bye bye to the read
+                            fields, save query to report and clear list buttons, they were just confusing and
+                            a source of problems. When the user hits ok, the fields of the report are replaced
+                            with the currently selected fields, and the report query is also updated to match.
+18/03/2004 08:49 ertano     BUG: #820943 fixed
+18/03/2004 01:36 ertano     BUG: #915801 fixed (in Templates some elements had wrong height settings which caused problems)
+16/03/2004 20:15 ertano     some updates for i18n; you can select a Language in OptionsDialog and save it now, 
+			    available Languages will be read out of .\lang directory, I have added a Filter
+			    so in an embedded environments we can differ between ireport language files and those from the main application
+			    Language files must start with "Ireport" e.g. "Ireport_en_EN.properties"
+16/03/2004 17:26 ertano     BUG #914744: Compatibility window close/ok event listeners implemented (save procedure still missing)
+16/03/2004 17:13 ertano     BUG: iReport did not compile to default compilation directory fixed.
+16/03/2004 11:44 phenderson More changes to the ant build script. We now produce
+                            tar.gz versions with correct permissions on the shell 
+                            script, for our *NIX users.
+14/03/2004 23.55 gt78       Staring scriptlet support
+14/03/2004 01.22 gt78       Added try and catch for setPLAF()
+13/03/2004 23:55 ertano	    Started implementing I18n and Choosable L&F
+11/03/2004 19:48 ertano     BUG #914149 fixed
+11/03/2004 17:42 phenderson Trimmed the size of the source build by removing contrib/fonts/templats/examples
+                            Removed misleading iReport.bat and iReport.sh as 
+                            they are no good to end users, and a dev should 
+                            have ant on the path anyway (you do dont you?)
+                            
+11/03/2004 17:13 phenderson Enhanced the ant build script again. 
+                            I have added all the files from the release
+                            version into cvs, and modified the ant build to
+                            include these, when it build the distribution.
+                            All releases should be made using...
+                            ant dist
+			    
+10/03/2004 23.24 gt         Added support for property tag (new in jr 0.5.2)
+09/03/2004 19.30 gt         Added support for stretchType on all report elements
+09/03/2004 19.30 gt         Added support for key tag (no check for duplicated keys)
+
+________________________________________________________________________________
+Version 0.2.3.1 released
+________________________________________________________________________________
+
+06/03/2004 12.39 kku 	    Fixed a serius error on saving parameters
+
+________________________________________________________________________________
+Version 0.2.3 released
+________________________________________________________________________________
+
+28/02/2004 14:11 phenderson Enhanced the ant build script. We have a new target called dist which will
+                            build 3 additional zip files, iReport_Full iReport_Lite and iReport_SRC
+                            The only difference between Full and Lite is the inclusion of additional
+                            3rd party JDBC libraries. The SRC version is the source code.
+                            I've also placed the libraries needed to build iReport in CVS, currently
+                            we are using JasperReports 0.5.2 iText1.02b
+                            The database driver jar files are the up to date, as I just downloaded them.
+                            My intention is that end users download iReport_Full, unzip, then just run it
+                            using the provided bat file.                           
+
+27/02/2004 20:38 phenderson The report query dialog can now read database fields even when the SQL statement 
+                            has report parameters embeded within it. 
+                            An example to illustrate.
+                            SELECT * FROM t_quote WHERE id=$P{QuoteID} ORDER BY $P!{OrderBy}
+                            This relies on the parameters having default values specified.
+                            QuoteID java.lang.Integer default= new java.lang.Integer(1234)
+                            OrderBy java.lang.String  default= "title ASC"
+
+27/02/2004 17:54 ertano	    First steps to make iReport embeddable, MainFrame.openNewReportWindow made public
+			    added new methods -> setEmbeddedIreport(boolean status), boolean isEmbedded()
+
+23/02/2004 00.01 ertano     Fixed bug 843918
+
+21/02/2004 08.24 brainjava  Added support to save the users preference of viewer.  See the MainFrame.java
+                            file.  Nothing major, but nice none the less.
+                            
+21/02/2004 08.24 brainjava  Fixed a bug in the "do you want to save before closing" code.  If the user
+                            clicked on the top right corner x in the window to close it would ask the
+                            question and then it would hide the window and not exit.  Just found the
+                            default close action was set to hide.  changed to do nothing.  Went ahead
+                            and added for the window to dispose just in case of some internal OS memory
+                            leaks when maybe a window handle isn't released correctly....(Windows I'm sure)
+
+21/02/2004 08.24 brainjava  Fixed a bug where the Textfields were not being drawn correctly at design time.
+                            The code was using a line measurer at one time, and someone had commented it out.
+                            The code has to be there for the lines, space, and graphics to be drawn correctly
+                            together.  The line measurer formats the graphics into paragraph style.  It also
+                            deals with spacing and the alignment as in Mid, Top, Center, Left, etc.
+                         
+21/02/2004 08.24 brainjava  Changed the default directory for compiling.  Instead of the working directory
+                            this has been modfied to use the users home directory. This seems safer than
+                            compiling to a directory where a file named the same name as a temp file may
+                            reside.  The user can still set the default directory.  The user can now
+                            tell iReport to compile to the reports directory.  So for any given report
+                            there will be the java file beside it in the directory when compiling is finished.
+                            This is done with a check button on options panel.
+                            
+21/02/2004 08.24 brainjava  Disabled save buttons has been commented out.  This will be commented back
+                            in after events to notify of expression changes has been added.  However,
+                            the code to ask the user if they want to save before exiting still exists.
+                            At the moment there is no code to ask on a per file basis as an internal
+                            frame is closed.  This to come with the events.
+
+
+20/02/2004 14:27 phenderson Added a server address field to the JDBC panel of the Report Connection dialog
+                            this field is used with the wizard to generate the JDBC connection URL.
+                            Also re-arranged the form a little bit to make things a bit simpler for the 
+                            user. 
+                            When the database driver is changed, automatically call the wizard to populate 
+                            the JDBC URL field. in an attempt to help users.
+                            Added Parents to the test connection dialogs.
+                            BugFix: connection name was being used instead of the database name
+                            BugFix: Now we close the database connection when testing
+
+20/02/2004 08.45 brainjava  Added code to ask user as what to do about unsaved files on exit.  This code
+                            shows and hides the Save and Save all info when things are saved and modified.
+                            The only thing buggy I noticed is that everytime a report is opened a
+                            ElementChange event is being called for the report.  So the report is being modified
+                            when it is opened.  I assume this is not normal.  I didn't have time this go
+                            round to do it.
+
+20/02/2004 07.20 brainjava  Added method to Misc to get a Frame from any component.  This allowed me
+                            to make the ValuesDialog the parent of any of it's children thus getting
+                            rid of the peskie bug where only the v/p/f editing dialog would be displayed
+                            if one had tabbed/moved off the application while working on a v/p/f.
+
+20/02/2004 06.35 brainjava  Made some simple text changes.  Changed external editor error message say
+                            launching instead of lunching.  Changed "Previous windpw" to "Previous window".
+
+20/02/2004 05.20 brainjava  Added some static variables for file names which have been hard coded.
+
+20/02/2004 01:20 brainjava  Added support for multi line expressions.  Simple to use go to options and check the box.
+                            After box is checked then isCode attribute of all expressions will be set.  Using multi
+                            line expressions means users must set the return with syntax value = correctValue; instead
+                            of using no semi colon and using a mangled one liner statement.  I'm not sure how to work this
+                            in, but I have updated Jasper Reports API and DTD.  (simple changes).  I have contacted
+                            Teodor about the changes and I am working on getting them in the main branch.  The library is
+                            posted as a jar file called brainjava_jasper.jar in the iReport2 repos.  Everyone should try it
+                            out and let me know what they think about it.  It is pure java, and uses the system we currently
+                            have.  This required some small changes to iReport.  Coders should be aware when creating a new
+                            report object (at least in the time being) to set usingMultiLineExpressions on the report from 
+                            the MainFrame classes usingMultiLineExpressions app option/property.
+   
+18/02/2004 23:03 phenderson Made ElemetPropertiesDialog resizeable, by adding layout managers.
+                            Enhanced JEdit JEditTextArea so it works withing NetBeans Form designer, without netbeans having a spasm.
+
+18/02/2004 10:18 phenderson Testing SourceForge CVS access after the problems.
+
+17/02/2004 19.01 gt78       Complete support for snap to grid and correct Mouselisteners implementation
+
+17/02/2004 17.08 gt78       Removed test LookAndFeel. We'll restore it in the properties window.
+
+16/02/2004 16.46 kku        Memory print reduced by commenting out unused BufferedImage
+
+14/02/2004 14.34 kku        Enabled scrolling of report with mousewheel
+
+14/02/2004 14.13 kku        Enabled syntaxcoloring of expressions
+
+14/02/2004 01.23 gt78       Fixed fields registration
+
+14/02/2004 00.43 gt78       Fixed tool tips labels for main toolbar
+
+14/02/2004 00.43 gt78       Removed Java2D exporter menu entry. It was not yet implemented and it was unuseful
+
+14/02/2004 00.25 gt78       Fixed bug 869543
+
+________________________________________________________________________________
+Version 0.2.2 released
+________________________________________________________________________________
+
+
+
