@@ -98,7 +98,7 @@ def verificacion():
   if usuario and password:
     signin_user = users.find_one({'nombre':usuario})
     UserPasword= signin_user['password']
-    veri = check_password_hash(password,UserPasword)
+    veri = check_password_hash(UserPasword,password)
     if veri == True:
       return jsonify({"Contraseña_correcta": "ok"})
     else:
