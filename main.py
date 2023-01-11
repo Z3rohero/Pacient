@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, jsonify, Response
+from flask import Flask, request, jsonify, Response, render_template
 from flask_pymongo import PyMongo
 from pymongo import MongoClient
 import pymongo
@@ -16,9 +16,9 @@ app = Flask(__name__)
 mongo = os.environ['mongo']
 otra = str(mongo)
 client = MongoClient(otra)
-cors = CORS(app, resources={r"/user/*": {"origins": "*"}})
+cors = CORS(app, resources={r"/*/*": {"origins": "*"}})
 
-app.config["UPLOAD_FOLDER"] = "archivos"
+app.config["UPLOAD_FOLDER"] = "./archivos"
 ALLOWED_EXTENSIONS = set(['jpg', 'png', 'jpeg', 'gif','pdf','txt','doc','docx'])
 
 
@@ -113,14 +113,23 @@ def setUser(id):
       "message":"usuario " + id +  "ha sido actualizado"
     })
    
+
+
+@app.route('/upload')
+def guarda():
+  return  render_template("prueba.html")
   
-@app.route('/user/archivos', methods=['POST'])
+
+
+
+@app.route('/upload', methods=['POST'])
 def guardaArchivo():
-  file = request.file["uploadFile"]
+  file = request.files["uploadFile"]
   filename = secure_filename(file.filename)
   if file and extesiones(filename):
     file.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
     return jsonify({"message":"Subido correctamente"})
+
   return jsonify({"message":"No subido"})
 
 
@@ -144,4 +153,4 @@ def not_encontrado(error=None):
 
 if __name__ == "__main__":
   app.run(debug=True, host='0.0.0.0', port=81)
-0
+
