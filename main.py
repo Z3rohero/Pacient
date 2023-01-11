@@ -100,9 +100,9 @@ def verificacion():
     UserPasword= signin_user['password']
     veri = check_password_hash(UserPasword,password)
     if veri == True:
-      return jsonify({"Contraseña_correcta": "ok"})
+      return jsonify({"Contraseña_correcta": "True"})
     else:
-      return jsonify({"Contraseña_incorrecta": "false"})
+      return jsonify({"Contraseña_incorrecta": "False"})
   return jsonify ({"message":" Usuario o la contraseña incorrecta"})
  
 
